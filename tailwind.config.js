@@ -9,7 +9,18 @@ module.exports = {
     ],
     prefix: "",
     theme: {
+
 		extend: {
+			borderRadius: {
+				'none': '0',
+				'sm': '0.125rem',
+				DEFAULT: '0.625rem',
+				DEFAULT: '10px',
+				'md': '0.375rem',
+				'lg': '0.5rem',
+				'full': '9999px',
+				'large': '12px',
+			},
 		colors: {
 			"white":"#fff",
 			"primary" : {
@@ -78,6 +89,7 @@ module.exports = {
 				800:"#060713",
 				900:"#040815",
 			},
+			"main": "#F5F5F7"
 		}
 		},
 	},

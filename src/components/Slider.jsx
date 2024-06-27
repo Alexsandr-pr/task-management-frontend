@@ -16,7 +16,7 @@ const Slider = ({title, type}) => {
     return (
             <Carousel >
                 <div className="flex justify-between gap-5 items-center mb-5">
-                    <h2 className="text-2xl ">{title}</h2>
+                    <h2 className="text-xl xl:text-2xl ">{title}</h2>
                     <div className="flex gap-2.5">
                         <CarouselPrevious className="relative">
                             
@@ -28,10 +28,18 @@ const Slider = ({title, type}) => {
                     {
                         type === "task" && 
                         <CarouselContent  >
-                            <Task />
-                            <Task />
-                            <Task />
-                            <Task />
+                            <CarouselItem className={"basis-full sm:basis-1/2 pl-5 xl:pl-8"}>
+                            <Task clazz="gap-4 p-4 xl:p-6 bg-white rounded-[10px]"/>
+                            </CarouselItem>
+                            <CarouselItem className={"basis-full sm:basis-1/2 pl-5 xl:pl-8"}>
+                            <Task clazz="gap-4 p-4 xl:p-6 bg-white rounded-[10px]"/>
+                            </CarouselItem>
+                            <CarouselItem className={"basis-full sm:basis-1/2 pl-5 xl:pl-8"}>
+                            <Task clazz="gap-4 p-4 xl:p-6 bg-white rounded-[10px]"/>
+                            </CarouselItem>
+                            <CarouselItem className={"basis-full sm:basis-1/2 pl-5 xl:pl-8"}>
+                            <Task clazz="gap-4 p-4 xl:p-6 bg-white rounded-[10px]"/>
+                            </CarouselItem>
                         </CarouselContent>
                     }
                     {

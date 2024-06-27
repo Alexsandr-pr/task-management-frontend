@@ -39,7 +39,7 @@ const Calendar = () => {
     };
 
     return (
-        <div className="max-w-[372px] p-6 bg-white rounded-[10px]">
+        <div className="max-w-full p-4 xl:p-6 bg-white rounded-[10px]">
             <div className="flex justify-between items-center mb-4">
                 <button className="h-4 w-4" onClick={prevWeek}>
                     <ChevronLeft  />

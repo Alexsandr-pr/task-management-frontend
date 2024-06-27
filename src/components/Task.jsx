@@ -5,40 +5,35 @@ import { CarouselItem } from './ui/carousel';
 import { TimeCircle } from './Icons';
 import photo from "@/assets/photo-5-task.png"
 
-const Task = () => {
+const Task = ({clazz}) => {
     return (
-        <CarouselItem className={"basis-1/2 pl-8"}>
-             <article className='flex flex-col gap-4 p-6 bg-white rounded-[10px]'>
-                <img  className='w-full h-full ' src={image} alt="" />
-                <div className="flex flex-col gap-1">
-                    <h3 className='text-base'>Creating Mobile App Design</h3>
-                    <p className='text-second-400 text-xs font-medium'>UI UX Design</p>
+        <article className={`flex flex-col ${clazz}`}>
+            <img  className='w-full h-full ' src={image} alt="" />
+            <div className="flex flex-col gap-1">
+                <h3 className='text-base'>Creating Mobile App Design</h3>
+                <p className='text-second-400 text-xs font-medium'>UI UX Design</p>
+            </div>
+            <div className="">
+                <div className="flex items-center justify-between gap-5 ">
+                    <p className='text-base font-medium mb-3 text-left'>Progress</p>
+                    <span className='text-right text-primary-500 text-base'>75%</span>
                 </div>
-                <div className="">
-                    
-                    <div className="flex items-center justify-between gap-5 ">
-                        <p className='text-base font-medium mb-3 text-left'>Progress</p>
-                        <span className='text-right text-primary-500 text-base'>75%</span>
-                    </div>
-                    <Slider defaultValue={[75]} max={100} step={1} />
+                <Slider defaultValue={[75]} max={100} step={1} />
+            </div>
+            <div className="flex items-center gap-4 justify-between">
+                <div className="flex items-center gap-2">
+                    <TimeCircle/>
+                    <span className='inline-flex font-medium '>3 Days Left</span>
                 </div>
-                <div className="flex items-center gap-4 justify-between">
-                    <div className="flex items-center gap-2">
-                        <TimeCircle/>
-                        <span className='inline-flex font-medium '>3 Days Left</span>
-                    </div>
-                    <div className="flex items-center">
-                        <img src={photo} alt="" />
-                        <img className='ml-[-8px]' src={photo} alt="" /> 
-                        <img className='ml-[-8px]' src={photo} alt="" />
-                        <img className='ml-[-8px]' src={photo} alt="" />
-                        <img className='ml-[-8px]' src={photo} alt="" />
-                    </div>
+                <div className="flex items-center">
+                    <img src={photo} alt="" />
+                    <img className='ml-[-8px]' src={photo} alt="" /> 
+                    <img className='ml-[-8px]' src={photo} alt="" />
+                    <img className='ml-[-8px]' src={photo} alt="" />
+                    <img className='ml-[-8px]' src={photo} alt="" />
                 </div>
-
-            </article>
-        </CarouselItem>
-       
+            </div>
+        </article>
     )
 }
 

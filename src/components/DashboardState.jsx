@@ -4,10 +4,12 @@ import CustomSelect from "./CustomSelect";
 
 const DashboardState = () => {
     return (
-        <div className="flex gap-8">
-            <div className="min-w-[194px] max-h-[214px] p-5 bg-second-500 rounded-[10px] gap-4  leading-normal  inline-flex font-semibold flex-col text-white">
-                <h2 className="text-base ">Running Task</h2>
-                <p className=" text-[32px] flex-auto leading-normal ">65</p>
+        <div className="gap-8">
+            <div className="min-w-[194px] md:h-[214px]  p-5 bg-second-500 rounded-[10px] gap-4  leading-normal justify-between md:justify-normal inline-flex font-semibold flex-row md:flex-col text-white">
+                <div className="">
+                    <h2 className="text-base ">Running Task</h2>
+                    <p className=" text-[32px] flex-auto leading-normal ">65</p>
+                </div>
                 <div className="flex gap-5 items-center">
                     <div className="w-[68px] h-[68px] relative">
                         <svg xmlns="http://www.w3.org/2000/svg" width="72" height="72" viewBox="0 0 72 72" fill="none">
@@ -21,15 +23,14 @@ const DashboardState = () => {
                         <p className="text-second-300 text-sm font-medium">Task</p>
                     </div>
                 </div>
-                
             </div>
-            <div className="p-5 rounded-[10px] flex flex-col gap-5 bg-[#F5F5F7] w-full">
+            <div className="p-5 rounded inline-flex flex-col gap-5 bg-[#F5F5F7] w-full">
                 
                 <div className="flex items-center justify-between gap-4">
                     <p className="text-base text-second-500 ">Activity</p>
                     <CustomSelect/>
                 </div>
-                <div className="bg-white rounded-[10px] p-2.5 w-full ">
+                <div className="bg-white rounded p-2.5">
                     <LineChart />
                 </div>
             </div>

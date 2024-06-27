@@ -1,13 +1,6 @@
 @import url(https://fonts.googleapis.com/css?family=Plus+Jakarta+Sans:regular,500,600&display=swap);
 
-body {
-    overflow-x: hidden;
-    font-family: Plus+Jakarta+Sans;
-    font-weight: 600;
-    color:#141522;
-    line-height: normal;
-    font-size: 16px;
-}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -19,10 +12,60 @@ body {
     .text {
         @apply text-base text-second-400 font-medium leading-normal;
     }
+    
    
 }
 
-
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+    -webkit-tap-highlight-color:  transparent;
+}
+ul,
+ol,
+li {
+    list-style: none;
+}
+img {
+    vertical-align: top;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: inherit;
+    font-size: inherit; 
+}
+html,
+body {
+    overflow-x: hidden;
+    font-family: Plus+Jakarta+Sans;
+    font-weight: 600;
+    color:#141522;
+    line-height: normal;
+    font-size: 16px;
+}
+button,
+input {
+    font-weight: inherit;
+    font-size: inherit;
+    color: inherit;
+    font-family: inherit;
+}
+button {
+    cursor: pointer;
+    background-color: inherit;
+}
 
 .calendar-span {
     position: relative;
@@ -48,4 +91,14 @@ body {
 }
 .nav-link.active .nav-text {
     color:#141522;
+}
+@media(max-width:1280px){
+    .main {
+        width: calc(100vw - 80px);
+    }
+}
+@media(max-width:768px){
+    .main {
+        width: 100%;
+    }
 }
