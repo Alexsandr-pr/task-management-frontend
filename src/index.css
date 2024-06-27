@@ -1,0 +1,51 @@
+@import url(https://fonts.googleapis.com/css?family=Plus+Jakarta+Sans:regular,500,600&display=swap);
+
+body {
+    overflow-x: hidden;
+    font-family: Plus+Jakarta+Sans;
+    font-weight: 600;
+    color:#141522;
+    line-height: normal;
+    font-size: 16px;
+}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+    .title {
+        @apply text-2xl text-second-500 font-semibold leading-normal;
+    }
+    .text {
+        @apply text-base text-second-400 font-medium leading-normal;
+    }
+   
+}
+
+
+
+.calendar-span {
+    position: relative;
+    z-index: 20;
+}
+.calendar {
+    left: -4px;
+    z-index: 12;
+    border-radius:22px;
+    display: flex;
+    width: 40px;
+    height: 72px;
+    background-color: #141522;
+    bottom: -6px;
+    position: absolute;
+}
+.nav-link.active path {
+    stroke:#141522;
+}
+.nav-link.active {
+    border-radius: 10px;
+    background: #F5F5F7;
+}
+.nav-link.active .nav-text {
+    color:#141522;
+}
