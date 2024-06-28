@@ -9,10 +9,12 @@ const SearchCustom = () => {
 
     const placeholder = {
         "/task": "Search Task",
+        "/task/1": "Search Task",
         '/settings': "",
         '/message': "",
         "/mentors": "Search Mentors"
     }
+
     return (
         <div className='flex justify-between items-center gap-5'>
             <div className="w-full md:w-2/3 xl:w-2/5">

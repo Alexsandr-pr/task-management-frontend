@@ -28,6 +28,13 @@ const Sidebar = () => {
                             )
                         })
                     }
+                    <li className="">
+                        <NavLink to="task/1" className="flex gap-3 group nav-link items-center justify-center xl:justify-start py-2.5 px-5">
+                            <div className="text-sm hidden xl:block text-second-300 nav-text font-semibold leading-normal">
+                                task 1
+                            </div>
+                        </NavLink>
+                    </li>
                 </ul>
                 
             </nav>

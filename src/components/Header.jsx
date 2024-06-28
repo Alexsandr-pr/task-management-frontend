@@ -17,6 +17,7 @@ const Header = () => {
     }
     const titles = {
         "/task": "Explore Task",
+        "/task/1": "Detail Task",
         '/settings': "",
         '/message': "",
         "/mentors": "Explore Mentors"
