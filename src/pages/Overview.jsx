@@ -28,7 +28,7 @@ const Overview = () => {
                     pathname  === "/" && !query && <Header/>
                 }
                 <DashboardState/>
-                <Slider  type={"mentors"} title={"Monthly Mentors"}/>
+                <Slider itemclasses={"basis-full sm:basis-1/2 xl:basis-full  2xl:basis-1/2  2xl:pl-8"} type={"mentors"} title={"Monthly Mentors"}/>
                 <Slider itemclasses={"basis-full sm:basis-1/2 pl-5 xl:pl-8"} type={"task"} title={"Upcoming Task"}/>
             </div>
             <div className="bg-main xl:w-[30%] 2xl:w-[36%] p-5  2xl:p-8 flex flex-col gap-10 items-center">

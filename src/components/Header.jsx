@@ -16,9 +16,10 @@ const Header = () => {
         surname: "Pierierodov"
     }
     const titles = {
-        "/task": "Explore Mentors",
+        "/task": "Explore Task",
         '/settings': "",
-        '/message': ""
+        '/message': "",
+        "/mentors": "Explore Mentors"
     }
 
     if(pathname === "/task") {

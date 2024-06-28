@@ -57,14 +57,22 @@ const Slider = ({title, type, itemclasses}) => {
                     {
                         type === "mentors" && 
                         <CarouselContent >
-                            <Mentor />
-                            <Mentor/>
-                            <Mentor />
-                            <Mentor/>
-                            <Mentor />
-                            <Mentor/>
-                            <Mentor />
-                            <Mentor/>
+                            <CarouselItem className={`${itemclasses}`}>
+                                <Mentor />
+                            </CarouselItem>
+                            <CarouselItem className={`${itemclasses}`}>
+                                <Mentor />
+                            </CarouselItem>
+                            <CarouselItem className={`${itemclasses}`}>
+                                <Mentor />
+                            </CarouselItem>
+                            <CarouselItem className={`${itemclasses}`}>
+                                <Mentor />
+                            </CarouselItem>
+                            <CarouselItem className={`${itemclasses}`}>
+                                <Mentor />
+                            </CarouselItem>
+                            
                         </CarouselContent>
                     }
                 
