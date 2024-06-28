@@ -1,7 +1,6 @@
 import React from 'react'
 import image from "@/assets/task-image.jpg";
 import { Slider } from "@/components/ui/slider"
-import { CarouselItem } from './ui/carousel';
 import { TimeCircle } from './Icons';
 import photo from "@/assets/photo-5-task.png"
 

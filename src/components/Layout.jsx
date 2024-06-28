@@ -18,7 +18,10 @@ const Layout = () => {
                     pathname === "/" && query && <Header/> 
                 }
                 {
-                    pathname !== "/" && <Header/> 
+                    pathname !== "/" && 
+                    <div className="md:p-8 md:border-b md:border-solid md:border-b-main md:bg-white">
+                        <Header/> 
+                    </div>
                 }
 
                 
