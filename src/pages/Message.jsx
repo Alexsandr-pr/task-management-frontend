@@ -231,7 +231,7 @@ const Message = () => {
 
 
     const query = useMediaQuery('(max-width:1024px)');
-    const [activeState, setActiveState] = useState("chat");
+    const [activeState, setActiveState] = useState("chatUser");
 
     
     return (
@@ -320,13 +320,14 @@ const Message = () => {
                 <ul className='flex flex-col h-[70vh] chat-scroll pr-2'>
                     {
                         dataChat.map(({name, messages,id}) => {
-                            
-                            
                             return (
                                 <>
                                     <li key={id} className='chat-user'>
                                         <button 
-                                            onClick={() => setChatActive(id)}
+                                            onClick={() => {
+                                                setChatActive(id)
+                                                setActiveState("chat")
+                                            }}
                                             className={`py-2.5 px-5 flex items-center gap-3 w-full ${id === chatActive ? " bg-main rounded" : null}`}>
                                             <img src={photoMentor} alt="" />
                                             <div className="flex  flex-col gap-1 w-full">
@@ -355,7 +356,13 @@ const Message = () => {
             {
             query && activeState === "chat" && 
             <div className="flex-col flex w-full  lg:w-3/5 xl:w-2/3 ">
-            <ChatUserTop/>
+                <button className='w-1- h-10 bg-blue-200' onClick={() => setActiveState("chatUser")}>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path d="M7.97502 4.94189L2.91669 10.0002L7.97502 15.0586" stroke="#141522" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M17.0833 10H3.05835" stroke="#141522" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+                <ChatUserTop/>
             <div className="bg-[#FAFAFA] h-[65vh] pt-12 chat-scroll flex flex-col gap-5 w-full h-64 px-8">
                 {
                     activeChat?.messages.map((item, i) => {
