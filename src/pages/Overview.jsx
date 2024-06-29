@@ -8,12 +8,23 @@ import { useLocation } from "react-router-dom";
 import Task from "@/components/Task";
 import { Button } from "@/components/ui/button";
 import useMediaQuery from "@/hooks/useMediaQuery";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { setLoadingMentors } from "@/store/reducers/mentorReducer";
 import { useEffect } from "react";
+import Skeleton from "@/components/Skeleton";
 
 
-
+const data = [
+    {
+        text: "Understanding the tools in Figma"
+    },
+    {
+        text: "Understand the basics of making designs"
+    },
+    {
+        text: "Design a mobile application with figma "
+    }
+]
 
 
 
@@ -23,15 +34,15 @@ import { useEffect } from "react";
 const Overview = () => {
     const {pathname} = useLocation();
     const query = useMediaQuery('(max-width:767.98px)');
-    
+    const {loading} = useSelector(store => store.mentor);
     const dispatch = useDispatch();
 
     useEffect(() => {
         const timer = setTimeout(() => {
             dispatch(setLoadingMentors(false));
         }, 300)
-        
     }, [])
+
     return (
         <div className="flex flex-col xl:flex-row">
             <div className="flex flex-col xl:w-[70%] bg-[#FCFCFC] md:bg-[#FAFAFA]  2xl:w-[63%] gap-8 p-5  2xl:p-8">
@@ -64,21 +75,25 @@ const Overview = () => {
                         <div className=" w-full sm:w-1/2  flex flex-col xl:w-full pt-8 sm:pt-0 xl:pt-8" >
                             <div className="flex items-center justify-between  gap-5 mb-5">
                                 <p>Detail Task</p>
-                                <span className="text-xs text-second-400 font-medium">UI / UX Designer</span>
+                                <Skeleton cls={"w-20 h-5 bg-skelet-300"} loading={loading}>
+                                    <span className="text-xs text-second-400 font-medium">UI / UX Designer</span>
+                                </Skeleton>   
                             </div>
                             <ul className="flex basis-full flex-col mb-14 sm:mb-0 xl:mb-14 gap-5">
-                                <li className="flex items-center gap-3 ">
-                                    <span className="w-9 h-9 flex items-center justify-center text-sm  rounded bg-main">1</span>
-                                    <p className="text-sm font-medium">Understanding the tools in Figma </p>
-                                </li>
-                                <li className="flex items-center gap-3 ">
-                                    <span className="w-9 h-9 flex items-center justify-center text-sm  rounded bg-main">2</span>
-                                    <p className="text-sm font-medium"> Understand the basics of making designs</p>
-                                </li>
-                                <li className="flex items-center gap-3 ">
-                                    <span className="w-9 h-9 flex items-center justify-center text-sm  rounded bg-main">3</span>
-                                    <p className="text-sm font-medium">Design a mobile application with figma </p>
-                                </li>
+                                    {
+                                        data.map(({text}, i) => {
+                                            return (
+                                                <Skeleton cls={"w-full h-8 bg-skelet-300"} loading={loading}>
+                                                    <li key={i} className="flex items-center gap-3 ">
+                                                        <span className="w-9 h-9 flex items-center justify-center text-sm  rounded bg-main">{i + 1}</span>
+                                                        <p className="text-sm font-medium">{text}</p>
+                                                    </li>
+                                                </Skeleton>   
+                                            )
+                                        })
+                                    }
+                                
+                                
                                 
                             </ul>
                             <Button className="w-full">

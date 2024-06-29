@@ -76,7 +76,7 @@ const Header = () => {
                 </div>
             </div>
             {
-                firstPathName !== "/" && firstPathName !== "/settings" && <SearchCustom/>
+                firstPathName !== "/" && firstPathName !== "/settings"  &&  firstPathName !== "/message" && <SearchCustom/>
             }
         </header>
     )

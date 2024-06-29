@@ -5,7 +5,6 @@ import { publicRoutes } from "../route"
 
 const Sidebar = () => {
     const {pathname} = useLocation();
-    console.log(pathname.split('/').slice(0, 2).join('/'))
     return (
         <div className='h-full min-w-full p-5 xl:p-8 bg-white'>
             <Link to="/" className="flex gap-3 mb-16 text-[32px] items-center justify-center font-semibold leading-normal xl:justify-start text-second-500">

@@ -1,10 +1,20 @@
 import Mentor from '@/components/Mentor'
 import Slider from '@/components/Slider'
-import React from 'react'
+import { setLoadingMentors } from '@/store/reducers/mentorReducer';
+import React, { useEffect } from 'react'
+import { useDispatch, useSelector } from 'react-redux';
 
 const Mentors = () => {
+    
+    const dispatch = useDispatch();
+
+    useEffect(() => {
+        const timer = setTimeout(() => {
+            dispatch(setLoadingMentors(false));
+        }, 300)
+    }, [])
     return (
-        <div className='w-full h-[100%] flex flex-col p-8 gap-8 bg-[#FAFAFA] border-l border-solid border-l-main'>
+        <div className='w-full  flex flex-col p-8 gap-8 bg-[#FAFAFA] border-l border-solid border-l-main'>
             <Slider itemclasses={"basis-full sm:basis-1/2 md:basis-1/3 lg:basis-1/4 pr-5 xl:pr-8 pl-0"} type={"mentors"} title={"Recent Mentors"}/>
             <div className="">
             <h2 className="text-xl xl:text-2xl mb-[18px]">Mentors</h2>

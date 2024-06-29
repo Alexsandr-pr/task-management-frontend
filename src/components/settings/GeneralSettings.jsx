@@ -2,6 +2,7 @@
 import { useState } from "react"
 import CustomCheckbox from "@/components/CustomCheckbox"
 import SettingsSelect from "@/components/SettingsSelect"
+import { Button } from "../ui/button"
 const data = [
     {
         text: "24 Hours",
@@ -19,7 +20,7 @@ const GeneralSettings = () => {
         <>
             <SettingsSelect label={"Language"}/>
             <SettingsSelect label={"Timezone"}/>
-            <div className="grid grid-cols-2 gap-8 w-full sm:w-[400px] ">
+            <div className="grid grid-cols-2 gap-4 md:gap-8 w-full sm:w-[400px] ">
                 {
                     data.map((item, i) => {
                         return (
@@ -27,6 +28,11 @@ const GeneralSettings = () => {
                         )
                     })
                 }
+            </div>
+            <div className="w-full sm:w-[216px]">
+                <Button className="w-full">
+                    Save Changes
+                </Button>
             </div>
         </>
     )

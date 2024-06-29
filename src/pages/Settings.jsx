@@ -29,7 +29,7 @@ const Settings = () => {
     }, []);
     
     return (
-        <div className='w-full  flex flex-col p-8 gap-8 bg-[#FAFAFA] border-l border-solid border-l-main'>
+        <div className='w-full  flex flex-col p-6 md:p-8 gap-8 bg-[#FAFAFA] border-l border-solid border-l-main'>
             <div className="p-5 md:p-8 rounded flex flex-col gap-8 bg-white ">
                 <ul  className='w-full flex border-b gap-6 border-b-main border-solid'>
                     {
