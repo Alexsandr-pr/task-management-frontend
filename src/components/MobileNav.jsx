@@ -4,9 +4,6 @@ import React from 'react'
 import {
     Sheet,
     SheetContent,
-    SheetDescription,
-    SheetHeader,
-    SheetTitle,
     SheetTrigger,
 } from "@/components/ui/sheet"
 import { publicRoutes } from '@/route';
@@ -14,7 +11,7 @@ import { NavLink } from 'react-router-dom';
 
 const MobileNav = () => {
     return (
-        <Sheet>
+        <Sheet className="transition-all duration-300">
             <SheetTrigger>
                 <button className="rounded-full w-11 h-11 md:w-[52px] md:h-[52px] border border-solid border-main flex justify-center items-center">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -24,7 +21,7 @@ const MobileNav = () => {
                     </svg>
                 </button>
             </SheetTrigger>
-            <SheetContent className="bg-white">
+            <SheetContent className="bg-white transition-all duration-300">
                 <nav className="mt-10">
                     <ul className="flex flex-col gap-6">
                     {

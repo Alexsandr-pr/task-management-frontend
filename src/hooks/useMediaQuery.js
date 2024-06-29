@@ -17,4 +17,3 @@ const useMediaQuery = (query) => {
 
 
 export default useMediaQuery;
-

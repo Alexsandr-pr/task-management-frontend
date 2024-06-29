@@ -10,7 +10,8 @@ import SearchCustom from "./SearchCustom";
 
 const Header = () => {
     const {pathname} = useLocation()
-
+    let firstPathName = pathname.split('/').slice(0, 2).join('/');
+    
     const user = {
         name: "Alex",
         surname: "Pierierodov"
@@ -18,8 +19,8 @@ const Header = () => {
     const titles = {
         "/task": "Explore Task",
         "/task/1": "Detail Task",
-        '/settings': "",
-        '/message': "",
+        '/settings': "Settings",
+        '/message': "Message",
         "/mentors": "Explore Mentors"
     }
 
@@ -45,7 +46,7 @@ const Header = () => {
                                 :
                                 <>
                                     {
-                                        titles[pathname]
+                                        titles[firstPathName]
                                     }
                                 </>
                             }
@@ -75,7 +76,7 @@ const Header = () => {
                 </div>
             </div>
             {
-                pathname !== "/" && <SearchCustom/>
+                firstPathName !== "/" && firstPathName !== "/settings" && <SearchCustom/>
             }
         </header>
     )

@@ -5,7 +5,7 @@ const Mentor = ({itemclasses, text}) => {
     return (
         
             <article className='flex flex-col gap-5 p-4 xl:p-6 bg-white rounded-[10px]'>
-                <div className="flex items-center justify-between gap-4 ">
+                <div className="flex items-center justify-between gap-4 flex-wrap">
                     <div className="flex items-center gap-2" >
                         <img width={48} height={48} className="rounded-full" src={photo} alt="mentor" />
                         <div className="flex flex-col gap-1">
@@ -18,7 +18,7 @@ const Mentor = ({itemclasses, text}) => {
                     </button>
                 </div>
                 <p className="text-sm text-second-300 font-medium">{text}</p>
-                <div className="flex justify-between items-center gap-2">
+                <div className="flex justify-between items-center gap-2 flex-wrap">
                     <div className="flex items-center gap-2">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                             <path d="M21.66 10.44L20.68 14.62C19.84 18.23 18.18 19.69 15.06 19.39C14.56 19.35 14.02 19.26 13.44 19.12L11.76 18.72C7.59 17.73 6.3 15.67 7.28 11.49L8.26 7.30001C8.46 6.45001 8.7 5.71001 9 5.10001C10.17 2.68001 12.16 2.03001 15.5 2.82001L17.17 3.21001C21.36 4.19001 22.64 6.26001 21.66 10.44Z" stroke="#54577A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
