@@ -3,7 +3,7 @@ import GeneralSettings from "@/components/settings/GeneralSettings";
 import SettingsProfile from "@/components/settings/SettingsProfile";
 import SettingsSecurity from "@/components/settings/SettingsSecurity";
 import { useEffect, useState } from "react"
-import {  Link, Route, Routes, useNavigate } from "react-router-dom";
+import {  Link,  Route, Routes, useLocation, useNavigate } from "react-router-dom";
 
 const data = [
     {
@@ -22,17 +22,15 @@ const data = [
 
 
 const Settings = () => {
-    const [state, setState] = useState("general");
+    const {pathname} = useLocation();
     const navigate = useNavigate();
-
     useEffect(() => {
-
         navigate("/settings/general");
     }, []);
     
     return (
         <div className='w-full  flex flex-col p-8 gap-8 bg-[#FAFAFA] border-l border-solid border-l-main'>
-            <div className="p-8 rounded flex flex-col gap-8 bg-white ">
+            <div className="p-5 md:p-8 rounded flex flex-col gap-8 bg-white ">
                 <ul  className='w-full flex border-b gap-6 border-b-main border-solid'>
                     {
                         data.map(({text, param}) => {
@@ -44,7 +42,8 @@ const Settings = () => {
                                     text-sm 
                                     font-semibold 
                                     p-3  
-                                    ${param === state && "border-b-primary-500 border-b  border-solid"}
+                                    ${pathname.split('/')[2] === param && "border-b border-solid border-b-primary-500"}
+                                    
                                     `}
                                     >{text}</Link>
                                 </li>
