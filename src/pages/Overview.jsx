@@ -8,6 +8,9 @@ import { useLocation } from "react-router-dom";
 import Task from "@/components/Task";
 import { Button } from "@/components/ui/button";
 import useMediaQuery from "@/hooks/useMediaQuery";
+import { useDispatch } from "react-redux";
+import { setLoadingMentors } from "@/store/reducers/mentorReducer";
+import { useEffect } from "react";
 
 
 
@@ -20,7 +23,15 @@ import useMediaQuery from "@/hooks/useMediaQuery";
 const Overview = () => {
     const {pathname} = useLocation();
     const query = useMediaQuery('(max-width:767.98px)');
+    
+    const dispatch = useDispatch();
 
+    useEffect(() => {
+        const timer = setTimeout(() => {
+            dispatch(setLoadingMentors(false));
+        }, 300)
+        
+    }, [])
     return (
         <div className="flex flex-col xl:flex-row">
             <div className="flex flex-col xl:w-[70%] bg-[#FCFCFC] md:bg-[#FAFAFA]  2xl:w-[63%] gap-8 p-5  2xl:p-8">

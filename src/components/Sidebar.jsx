@@ -1,9 +1,11 @@
 
 import logo from "@/assets/book-square.svg"
-import { Link, NavLink } from "react-router-dom"
+import { Link, NavLink, useLocation } from "react-router-dom"
 import { publicRoutes } from "../route"
 
 const Sidebar = () => {
+    const {pathname} = useLocation();
+    console.log(pathname.split('/').slice(0, 2).join('/'))
     return (
         <div className='h-full min-w-full p-5 xl:p-8 bg-white'>
             <Link to="/" className="flex gap-3 mb-16 text-[32px] items-center justify-center font-semibold leading-normal xl:justify-start text-second-500">
@@ -14,16 +16,20 @@ const Sidebar = () => {
                 <ul className="flex flex-col gap-6">
                     {
                         publicRoutes.map((item) => {
+                            const {path, name} = item;
                             return (
-                                <li className="">
-                                    <NavLink to={item.path} className="flex gap-3 group nav-link items-center justify-center xl:justify-start py-2.5 px-5">
+                                <li key={name} className="">
+                                    <Link to={path} className={`
+                                        ${pathname.split('/').slice(0, 2).join('/') === path.split('/').slice(0, 2).join('/') ? "active" : null}
+                                        flex gap-3 group nav-link items-center justify-center xl:justify-start py-2.5 px-5
+                                    `}>
                                         <div className="">
                                             <item.icon/>
                                         </div>
                                         <div className="text-sm hidden xl:block text-second-300 nav-text font-semibold leading-normal">
-                                            {item.name}
+                                            {name}
                                         </div>
-                                    </NavLink>
+                                    </Link>
                                 </li>
                             )
                         })

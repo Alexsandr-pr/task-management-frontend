@@ -4,8 +4,9 @@ import CustomSelect from "./CustomSelect";
 
 const DashboardState = () => {
     return (
-        <div className="gap-8">
-            <div className="min-w-[194px] md:h-[214px]  p-5 bg-second-500 rounded-[10px] gap-4  leading-normal justify-between md:justify-normal inline-flex font-semibold flex-row md:flex-col text-white">
+        <div className="gap-8 flex flex-col md:flex-col">
+
+            <div className="   p-5 bg-second-500 rounded-[10px] gap-4  leading-normal justify-between  inline-flex font-semibold flex-row  text-white">
                 <div className="">
                     <h2 className="text-base ">Running Task</h2>
                     <p className=" text-[32px] flex-auto leading-normal ">65</p>
@@ -24,16 +25,17 @@ const DashboardState = () => {
                     </div>
                 </div>
             </div>
-            <div className="p-5 rounded inline-flex flex-col gap-5 bg-[#F5F5F7] w-full">
-                
-                <div className="flex items-center justify-between gap-4">
-                    <p className="text-base text-second-500 ">Activity</p>
-                    <CustomSelect/>
+                <div className="w-full ">
+                    <div className="p-5 rounded inline-flex flex-col gap-5 bg-[#F5F5F7] w-[100%]">
+                        <div className="flex items-center justify-between gap-4">
+                            <p className="text-base text-second-500 ">Activity</p>
+                            <CustomSelect/>
+                        </div>
+                        <div className="bg-white rounded p-2.5 w100%">
+                            <LineChart />
+                        </div>
+                    </div>
                 </div>
-                <div className="bg-white rounded p-2.5">
-                    <LineChart />
-                </div>
-            </div>
         </div>  
     )
 }
