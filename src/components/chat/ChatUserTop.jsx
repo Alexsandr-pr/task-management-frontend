@@ -1,15 +1,20 @@
 import photo from "@/assets/photo-mentor.png"
 import call from "/public/img/call.svg";
 import video from "/public/img/video.svg";
+import arrowLeft from "/public/img/arrow-left.svg";
+import { Link } from "react-router-dom";
 
 const ChatUserTop = () => {
     return (
-        <div className="w-full px-12 py-7 flex items-center justify-between gap-8 bg-white">
+        <div className="w-full px-6 md:px-12 py-7 flex items-center justify-between gap-8 bg-white">
             <div className="flex items-center gap-3">
+            <Link to={'/message'}>
+            <img src={arrowLeft} alt="User name" />
+            </Link>
                 <img src={photo} alt="User name" />
                 <div className="flex flex-col gap-2">
                     <p className="text-sm ">Angelie Crison</p>
-                    <div className="flex items-center gap-2">
+                    <div className="flex text-xs items-center gap-2">
                         <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
                             <circle cx="9" cy="9" r="4" fill="#25C78B"/>
                         </svg>

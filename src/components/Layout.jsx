@@ -16,10 +16,11 @@ const Layout = () => {
             </div>
             <main className="main xl:w-[84vw] 2xl:w-[80vw]">
                 {
-                    pathname === "/" && query && <Header/> 
+                    pathname === "/" && query  && <Header/> 
                 }
+
                 {
-                    pathname !== "/" && 
+                    pathname !== "/" && pathname === "/message" &&
                     <div className="md:p-8 md:border-b md:border-solid md:border-b-main md:bg-white">
                         <Header/> 
                     </div>

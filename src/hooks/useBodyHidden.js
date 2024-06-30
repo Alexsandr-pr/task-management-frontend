@@ -17,8 +17,7 @@ const useBodyHidden = (id) => {
             document.body.style.overflow = "";
             bodyHidden = false;
         }
-    }
-    useEffect(() => {
+    }    useEffect(() => {
         check()
     }, [pathname, query]);
 
