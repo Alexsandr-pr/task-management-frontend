@@ -1,4 +1,4 @@
-import { Outlet, useLocation } from "react-router-dom";
+import { Outlet, useLocation, useParams } from "react-router-dom";
 import Sidebar from "./Sidebar";
 import Header from "./Header";
 import useMediaQuery from "@/hooks/useMediaQuery";
@@ -7,7 +7,9 @@ import useMediaQuery from "@/hooks/useMediaQuery";
 const Layout = () => {
 
     const {pathname} = useLocation();
-    const query = useMediaQuery('(max-width:767.98px)');
+    const queryMobile = useMediaQuery('(max-width:767.98px)');
+    const queryTablet = useMediaQuery('(max-width:1024px)');
+    const {id} = useParams();
 
     return (
         <div className={`flex h-full w-full bg-[#FAFAFA]`}>
@@ -16,16 +18,15 @@ const Layout = () => {
             </div>
             <main className="main xl:w-[84vw] 2xl:w-[80vw]">
                 {
-                    pathname === "/" && query  && <Header/> 
+                    pathname === "/" && queryMobile && <Header />
                 }
 
-                {
-                    pathname !== "/" && pathname === "/message" &&
+{
+                    pathname !== "/" && (!pathname.startsWith(`/message/`) || !queryTablet) &&
                     <div className="md:p-8 md:border-b md:border-solid md:border-b-main md:bg-white">
-                        <Header/> 
+                        <Header />
                     </div>
                 }
-
                 
                 
                     <Outlet/>
