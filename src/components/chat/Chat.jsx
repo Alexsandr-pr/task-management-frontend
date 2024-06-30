@@ -20,7 +20,7 @@ const Chat = ({
 
         <div className="flex-col flex w-full  lg:w-3/5 xl:w-2/3 ">
             <ChatUserTop/>
-            <div className="bg-[#FAFAFA]  pt-12 chat chat-scroll flex flex-col gap-5 w-full  px-8">
+            <div className="bg-[#FAFAFA] mb-24 lg:mb-0 pt-12 chat chat-scroll flex flex-col gap-5 w-full  px-8">
                 {
                     activeChat?.messages.map((item, i) => {
                         return (
@@ -34,7 +34,7 @@ const Chat = ({
                     }) 
                 }
             </div>
-            <div className="flex gap-8 p-5 bg-white">
+            <div className="fixed bottom-0 w-full lg:relative flex gap-8 p-5 bg-white">
                 <textarea  
                     onChange={e => setValue(e.target.value)}
                     value={value}
