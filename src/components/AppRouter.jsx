@@ -3,10 +3,8 @@ import { Route, Routes } from 'react-router-dom'
 import { publicRoutes } from '../route'
 import Layout from './Layout'
 import DetailTask from '@/pages/DetailTask'
-import GeneralSettings from './settings/GeneralSettings'
-import Settings from '@/pages/Settings'
-import SettingsSecurity from './settings/SettingsSecurity'
-import SettingsProfile from './settings/SettingsProfile'
+import Chat from './chat/Chat'
+import Message from '@/pages/Message'
 
 const AppRouter = () => {
     return (
@@ -20,6 +18,9 @@ const AppRouter = () => {
                     })
                 }
                 <Route path={`task/1`}  element={<DetailTask/>} />
+                <Route path="message/*" element={<Message />}>
+                    <Route path=":id" element={<Chat />} />
+                </Route>
             </Route>
         </Routes>
     )

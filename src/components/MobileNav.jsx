@@ -3,6 +3,7 @@ import { publicRoutes } from '@/route';
 import { Link, NavLink, useLocation } from 'react-router-dom';
 import {useAutoAnimate} from "@formkit/auto-animate/react"
 import logo from "@/assets/book-square.svg"
+import { MessageIcon } from './Icons';
 const MobileNav = () => {
 
     const [state, setState] = useState(false);
@@ -56,6 +57,16 @@ const MobileNav = () => {
                                 )
                             })
                         }
+                            <li className="">
+                                <NavLink to={"/message"} className="flex gap-3 group nav-link items-center justify-start  py-2.5 px-5">
+                                    <div className="">
+                                        <MessageIcon/>
+                                    </div>
+                                    <div className="text-sm text-second-300 nav-text font-semibold leading-normal">
+                                        Message
+                                    </div>
+                                </NavLink>
+                            </li>
                         </ul>
                         
                     </nav>

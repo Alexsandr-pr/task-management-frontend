@@ -27,12 +27,12 @@ export const publicRoutes = [
         icon: UserOctagonIcon,
         name:"Mentors"
     },
-    {
-        path: MESSAGE,
-        Component:Message,
-        icon: MessageIcon,
-        name:"Message"
-    },
+    // {
+    //     path: MESSAGE,
+    //     Component:Message,
+    //     icon: MessageIcon,
+    //     name:"Message"
+    // },
     {
         path: SETTINGS,
         Component:Settings,
