@@ -9,7 +9,7 @@ const Layout = () => {
     const {pathname} = useLocation();
     const queryMobile = useMediaQuery('(max-width:767.98px)');
     const queryTablet = useMediaQuery('(max-width:1024px)');
-    const {id} = useParams();
+    
 
     return (
         <div className={`flex h-full w-full bg-[#FAFAFA]`}>
@@ -20,16 +20,14 @@ const Layout = () => {
                 {
                     pathname === "/" && queryMobile && <Header />
                 }
-
-{
+                {
                     pathname !== "/" && (!pathname.startsWith(`/message/`) || !queryTablet) &&
                     <div className="md:p-8 md:border-b md:border-solid md:border-b-main md:bg-white">
                         <Header />
                     </div>
                 }
                 
-                
-                    <Outlet/>
+                <Outlet/>
                 
             </main>
         </div>

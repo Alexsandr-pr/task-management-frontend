@@ -9,7 +9,7 @@ const ChatUserTop = () => {
         <div className="w-full px-6 md:px-12 py-7 flex items-center justify-between gap-8 bg-white">
             <div className="flex items-center gap-3">
             <Link to={'/message'}>
-            <img src={arrowLeft} alt="User name" />
+                <img src={arrowLeft} alt="User name" />
             </Link>
                 <img src={photo} alt="User name" />
                 <div className="flex flex-col gap-2">

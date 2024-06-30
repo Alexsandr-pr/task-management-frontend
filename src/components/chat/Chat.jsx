@@ -20,7 +20,7 @@ const Chat = ({
 
         <div className="flex-col flex w-full  lg:w-3/5 xl:w-2/3 ">
             <ChatUserTop/>
-            <div className="bg-[#FAFAFA]  pt-12 chat chat-scroll flex flex-col gap-5 w-full h-64 px-8">
+            <div className="bg-[#FAFAFA]  pt-12 chat chat-scroll flex flex-col gap-5 w-full  px-8">
                 {
                     activeChat?.messages.map((item, i) => {
                         return (
