@@ -32,7 +32,7 @@ const Header = () => {
     const query = useMediaQuery('(max-width:767.98px)');
 
     return (
-        <header className='bg-white md:bg-inherit border-b border-solid border-main md:border-none px-6 py-8 gap-6 flex flex-col md:p-0 '>
+        <header className='bg-white md:bg-inherit border-b border-solid border-main dark:border-none md:border-none px-6 py-8 gap-6 flex flex-col md:p-0  dark:bg-dark-100'>
             
             <div className="flex flex-col-reverse md:flex-row justify-between md:items-center gap-6">
             {
@@ -66,7 +66,7 @@ const Header = () => {
 
 
                     <div className="flex items-center gap-4 md:gap-6">
-                        <button className="rounded-full w-11 h-11 md:w-[52px] md:h-[52px] border border-solid border-main flex justify-center items-center">
+                        <button className="rounded-full w-11 h-11 md:w-[52px] md:h-[52px] border border-solid dark:border-second-300 border-main dark:bg-dark-100  flex justify-center items-center">
                             <Notification/>
                         </button>
                         <button>

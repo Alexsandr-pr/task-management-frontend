@@ -2,10 +2,14 @@ import { Link, useParams } from "react-router-dom"
 import { Input } from "../ui/input"
 import photoMentor from "@/assets/photo-mentor.png"
 import { useSelector } from "react-redux";
+import Skeleton from "../Skeleton";
 
 const ChatUsers = ({
     clazz, 
 }) => {
+    const loading = useSelector(store => store.mentor.loading);
+
+
     const param = useParams();
     const dataChat = useSelector(store => store.chat.data);
     return (
@@ -16,10 +20,12 @@ const ChatUsers = ({
                     dataChat.map(({name, messages,id}) => {
                         return (
                             <li key={id} className='chat-user'>
-                                <Link to={`/message/${id}`} 
-                                    className={`py-2.5 px-5 flex items-center gap-3 w-full ${id === param.id ? "" : "" }`}>
-                                    <Static name={name} messages={messages}/>
-                                </Link>
+                                <Skeleton loading={loading} cls={"w-full h-12 bg-skelet-300 px-5"}>
+                                    <Link to={`/message/${id}`} 
+                                        className={`py-2.5 px-5 flex items-center gap-3 w-full ${id === param.id ? " bg-red-100" : "" }`}>
+                                        <Static name={name} messages={messages}/>
+                                    </Link>
+                                </Skeleton>
                             </li>
                         )
                     })

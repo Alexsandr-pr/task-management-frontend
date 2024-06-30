@@ -11,6 +11,7 @@ import {
   Filler
 } from 'chart.js';
 import { Line } from 'react-chartjs-2';
+import { useSelector } from 'react-redux';
 
 // Регистрация компонентов
 ChartJS.register(
@@ -25,6 +26,8 @@ ChartJS.register(
 );
 
 const LineChart = () => {
+	const darkMode = useSelector(store => store.theme.darkMoву);
+
 	const baseData = [1, 2, 1, 3, 2, 1, 2];	
 	const shadowData = baseData.map(value => value - 0.5); // Смещение данных на 0.5 (или 15px)
 
@@ -86,7 +89,7 @@ const LineChart = () => {
 			color: 'rgba(20, 21, 34, 0.1)' // Цвет и прозрачность вертикальных линий
 			},
 			ticks: {
-			color: '#141522', // Цвет текста для дней недели
+			color: darkMode ? '#fff' : '#141522', // Цвет текста для дней недели
 			font: {
 				size: 12, // Размер шрифта для дней недели
 				weight: 'medium' // Жирный шрифт для дней недели

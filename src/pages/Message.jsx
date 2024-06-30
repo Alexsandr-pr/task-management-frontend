@@ -2,6 +2,9 @@
 
 import ChatUsers from '@/components/chat/ChatUsers';
 import useMediaQuery from '@/hooks/useMediaQuery';
+import { setLoadingMentors } from '@/store/reducers/mentorReducer';
+import { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
 
 import { Outlet, useParams } from 'react-router-dom';
 
@@ -9,7 +12,13 @@ import { Outlet, useParams } from 'react-router-dom';
 const Message = () => {
     const query = useMediaQuery('(max-width:1024px)');
     const {id} = useParams()
+    const dispatch = useDispatch();
 
+    useEffect(() => {
+        const timer = setTimeout(() => {
+            dispatch(setLoadingMentors(false));
+        }, 300)
+    }, [])
     // const addTextToArray = (text, id) => {
     //     const newData = [...dataChat];
     //     const newMessage = {

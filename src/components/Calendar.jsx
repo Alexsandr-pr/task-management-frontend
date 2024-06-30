@@ -39,7 +39,7 @@ const Calendar = () => {
     };
 
     return (
-        <div className="max-w-full p-4 xl:p-6 bg-white rounded-[10px]">
+        <div className="max-w-full p-4 xl:p-6 bg-white dark:bg-dark-100 rounded-[10px]">
             <div className="flex justify-between items-center mb-6">
                 <button className="h-4 w-4" onClick={prevWeek}>
                     <ChevronLeft  />
@@ -51,7 +51,7 @@ const Calendar = () => {
             </div>
             <div className="grid grid-cols-7 gap-2 mb-3">
                 {days.map((day, index) => (
-                    <div key={index} className={`text-xs text-center font-medium cursor-pointer flex justify-center calendar-span ${selectedDayIndex === index ? " text-white" : "text-second-500"}`}>
+                    <div key={index} className={`text-xs text-center font-medium cursor-pointer flex justify-center calendar-span ${selectedDayIndex === index ? " text-white " : "text-second-500 dark:text-white"}`}>
                         {day}
                     </div>
                 ))}
@@ -65,11 +65,11 @@ const Calendar = () => {
                             <button
                                 key={index}
                                 className={`h-8 w-8 relative flex items-center justify-center  rounded-full text-xs text-center font-medium cursor-pointer ${
-                                    isSelected ? " bg-primary-500  text-[#F5F5F7]" : "bg-[#F5F5F7] "
+                                    isSelected ? " bg-primary-500  text-[#F5F5F7] dark:text-white" : "bg-[#F5F5F7] dark:text-second-500"
                                 }`}
                                 onClick={() => onDateClick(day)}
                             >
-                                <span className={`${isSelected ? " bg-primary-500  text-[#F5F5F7]" : "bg-[#F5F5F7] "} calendar-span h-8 w-8 relative flex items-center justify-center  rounded-full text-xs text-center font-medium cursor-pointer`}>{formattedDate}</span>
+                                <span className={`${isSelected ? " bg-primary-500  text-[#F5F5F7]" : "bg-[#F5F5F7] dark:bg-info-200"} calendar-span h-8 w-8 relative flex items-center justify-center  rounded-full text-xs text-center font-medium cursor-pointer`}>{formattedDate}</span>
                                 {
                                     isSelected && 
                                     <span className="calendar">

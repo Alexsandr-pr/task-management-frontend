@@ -34,17 +34,17 @@ const Chat = ({
                     }) 
                 }
             </div>
-            <div className="fixed bottom-0 w-full lg:relative flex gap-8 p-5 bg-white">
+            <div className="fixed bottom-0 w-full lg:relative items-center flex gap-4 p-5 bg-white">
                 <textarea  
                     onChange={e => setValue(e.target.value)}
                     value={value}
-                    className='w-full h-12 resize-none outline-none' placeholder='Send your message…' 
+                    className='w-[78%] h-12 resize-none outline-none' placeholder='Send your message…' 
                 />
-                <div className="flex items-center gap-8 ">
+                <div className="flex items-center gap-4 lg:gap-8 ">
                     <button>
                         <img src={attachCircle} alt="" />
                     </button>
-                    <Button onClick={() => addTextToArray(value, chatActive)} className="w-12 h-12 p-2">
+                    <Button onClick={() => addTextToArray(value, chatActive)} className="w-[48px] h-[48px] p-2">
                         <img src={send} alt="" />
                     </Button>
                 </div>

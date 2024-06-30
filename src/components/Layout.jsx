@@ -12,7 +12,7 @@ const Layout = () => {
     
 
     return (
-        <div className={`flex h-full w-full bg-[#FAFAFA]`}>
+        <div className={`flex h-full w-full bg-[#FAFAFA] dark:bg-dark-100`}>
             <div className="hidden  md:flex md:w-[8vw] min-w-[80px] xl:w-[16vw] 2xl:w-[20vw]">
                 <Sidebar/>
             </div>
@@ -22,7 +22,7 @@ const Layout = () => {
                 }
                 {
                     pathname !== "/" && (!pathname.startsWith(`/message/`) || !queryTablet) &&
-                    <div className="md:p-8 md:border-b md:border-solid md:border-b-main md:bg-white">
+                    <div className="md:p-8 md:border-b md:border-solid md:border-b-main dark:border-none md:bg-white dark:bg-dark-100">
                         <Header />
                     </div>
                 }

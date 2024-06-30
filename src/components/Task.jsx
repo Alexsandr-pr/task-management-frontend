@@ -12,17 +12,17 @@ const Task = ({clazz}) => {
     return (
         <article className={`flex flex-col ${clazz}`}>
             <Skeleton cls={"w-full h-auto aspect-[16/6] bg-skelet-300"} loading={loading}>
-                <img className='w-full h-full ' src={image} alt="" />
+                <img className='w-full h-full rounded' src={image} alt="" />
             </Skeleton>
             <TitleBlock title={"Creating Mobile App Design"} text={"UI UX Design"} loading={loading}/>
             
             <div className="">
                 <div className="flex items-center justify-between gap-5 mb-3">
                     <Skeleton cls={"w-20 h-5 bg-skelet-300"} loading={loading}>
-                        <p className='text-base font-medium  text-left'>Progress</p>
+                        <p className='text-base font-medium dark:text-white text-left'>Progress</p>
                     </Skeleton>
                     <Skeleton cls={"w-10 h-5 bg-skelet-300"} loading={loading}>
-                        <div className='text-right text-primary-500 text-base'>75%</div>
+                        <div className='text-right text-primary-500 dark:text-info-200 text-base'>75%</div>
                     </Skeleton>
                 </div>
                 <Skeleton cls={"w-full h-2 bg-skelet-200"} loading={loading}>
@@ -42,7 +42,7 @@ const Task = ({clazz}) => {
                 <div className="flex items-center">
                     <Skeleton cls={"w-20 h-5 bg-skelet-300"} loading={loading}>
                         <img src={photo} alt="" />
-                        <img className='ml-[-8px]' src={photo} alt="" /> 
+                        <img className='ml-[-8px] ' src={photo} alt="" /> 
                         <img className='ml-[-8px]' src={photo} alt="" />
                         <img className='ml-[-8px]' src={photo} alt="" />
                         <img className='ml-[-8px]' src={photo} alt="" />

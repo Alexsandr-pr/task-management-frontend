@@ -14,7 +14,7 @@ const Mentors = () => {
         }, 300)
     }, [])
     return (
-        <div className='w-full  flex flex-col p-8 gap-8 bg-[#FAFAFA] border-l border-solid border-l-main'>
+        <div className='w-full  flex flex-col p-8 gap-8 bg-[#FAFAFA] dark:bg-dark-200 border-l border-solid border-l-main'>
             <Slider itemclasses={"basis-full sm:basis-1/2 md:basis-1/3 lg:basis-1/4 pr-5 xl:pr-8 pl-0"} type={"mentors"} title={"Recent Mentors"}/>
             <div className="">
             <h2 className="text-xl xl:text-2xl mb-[18px]">Mentors</h2>

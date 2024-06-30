@@ -29,8 +29,8 @@ const Settings = () => {
     }, []);
     
     return (
-        <div className='w-full  flex flex-col p-6 md:p-8 gap-8 bg-[#FAFAFA] border-l border-solid border-l-main'>
-            <div className="p-5 md:p-8 rounded flex flex-col gap-8 bg-white ">
+        <div className='w-full h-[100%] flex flex-col p-6 md:p-8 gap-8 dark:bg-dark-200 bg-[#FAFAFA] border-l border-solid border-l-main'>
+            <div className="p-5 md:p-8 rounded flex flex-col gap-8 bg-white dark:bg-dark-100">
                 <ul  className='w-full flex border-b gap-6 border-b-main border-solid'>
                     {
                         data.map(({text, param}) => {

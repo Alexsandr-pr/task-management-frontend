@@ -7,10 +7,10 @@
 
 @layer utilities {
     .title {
-        @apply text-2xl text-second-500 font-semibold leading-normal;
+        @apply text-2xl text-second-500 dark:text-second-200 font-semibold leading-normal;
     }
     .text {
-        @apply text-base text-second-400 font-medium leading-normal;
+        @apply text-base text-second-400 dark:text-second-100 font-medium leading-normal;
     }
     
    
@@ -48,12 +48,17 @@ h6 {
 }
 html,
 body {
-    
     font-family: Plus+Jakarta+Sans;
     font-weight: 600;
-    color:#141522;
+    
     line-height: normal;
     font-size: 16px;
+}
+body.light {
+    color:#141522;
+}
+body.dark {
+    color:#DFE1F3;
 }
 button,
 input {

@@ -45,7 +45,7 @@ const Overview = () => {
 
     return (
         <div className="flex flex-col xl:flex-row">
-            <div className="flex flex-col xl:w-[70%] bg-[#FCFCFC] md:bg-[#FAFAFA]  2xl:w-[63%] gap-8 p-5  2xl:p-8">
+            <div className="flex flex-col xl:w-[70%] bg-[#FCFCFC] md:bg-[#FAFAFA] dark:bg-dark-200 2xl:w-[63%] gap-8 p-5  2xl:p-8">
                 {
                     pathname  === "/" && !query && <Header/>
                 }
@@ -53,11 +53,11 @@ const Overview = () => {
                 <Slider itemclasses={"basis-full sm:basis-1/2 xl:basis-full  2xl:basis-1/2  2xl:pl-8"} type={"mentors"} title={"Monthly Mentors"}/>
                 <Slider itemclasses={"basis-full sm:basis-1/2 pl-5 xl:pl-8"} type={"task"} title={"Upcoming Task"}/>
             </div>
-            <div className="bg-main xl:w-[30%] 2xl:w-[36%] p-5  2xl:p-8 flex flex-col gap-10 items-center">
+            <div className="bg-main dark:bg-dark-100 xl:w-[30%] 2xl:w-[36%] p-5  2xl:p-8 flex flex-col gap-10 items-center">
                 <div className="w-full sm:w-1/2 lg:w-1/3 xl:w-full">
                     <Calendar/>
                 </div>
-                <div className="w-full   p-4 xl:p-6 bg-white rounded-[10px]">
+                <div className="w-full  dark:bg-dark-100 p-4 xl:p-6 bg-white rounded-[10px]">
                     <div className="flex items-center justify-between gap-5 mb-5">
                         <h3 className="text-sm font-semibold">Task Today</h3>
                         <button>
@@ -65,7 +65,7 @@ const Overview = () => {
                         </button>
                     </div>
                     <div className="flex flex-col sm:flex-row xl:flex-col  gap-8 ">
-                        <div className="pb-8 sm:pb-0 xl:pb-8  xl:border-b w-full sm:w-1/2 xl:w-full border-b border-b-main border-solid sm:border-none xl:border-b-main xl:border-solid">
+                        <div className="pb-8 sm:pb-0 xl:pb-8  xl:border-b w-full sm:w-1/2 xl:w-full border-b border-b-main dark:border-b-dark-200 border-solid sm:border-none xl:border-b-main xl:dark:border-b-dark-200 xl:border-solid">
                             
                             <div className="">
                                 <Task clazz={"gap-5"}/>
@@ -76,7 +76,7 @@ const Overview = () => {
                             <div className="flex items-center justify-between  gap-5 mb-5">
                                 <p>Detail Task</p>
                                 <Skeleton cls={"w-20 h-5 bg-skelet-300"} loading={loading}>
-                                    <span className="text-xs text-second-400 font-medium">UI / UX Designer</span>
+                                    <span className="text-xs text-second-400 dark:text-info-300  font-medium">UI / UX Designer</span>
                                 </Skeleton>   
                             </div>
                             <ul className="flex basis-full flex-col mb-14 sm:mb-0 xl:mb-14 gap-5">
@@ -85,7 +85,7 @@ const Overview = () => {
                                             return (
                                                 <Skeleton cls={"w-full h-8 bg-skelet-300"} loading={loading}>
                                                     <li key={i} className="flex items-center gap-3 ">
-                                                        <span className="w-9 h-9 flex items-center justify-center text-sm  rounded bg-main">{i + 1}</span>
+                                                        <span className="w-9 h-9 flex items-center justify-center text-sm  rounded bg-main dark:bg-dark-200">{i + 1}</span>
                                                         <p className="text-sm font-medium">{text}</p>
                                                     </li>
                                                 </Skeleton>   

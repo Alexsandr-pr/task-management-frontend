@@ -21,7 +21,7 @@ const data = [
 
 const DetailTask = () => {
     return (
-        <div className='bg-[#FAFAFA] flex flex-col lg:flex-row p-6 md:p-8 bg-[#FAFAFA] gap-8 border-l border-solid border-l-main'>
+        <div className=' dark:bg-dark-200 flex flex-col lg:flex-row p-6 md:p-8 bg-[#FAFAFA] gap-8 border-l border-solid border-l-main'>
             <div className="w-full lg:w-2/3 bg-white rounded flex flex-col">
                 <img className="w-full h-auto " src={detailTask} alt="" />
                 <div className="p-4 md:p-6 flex flex-col gap-6">

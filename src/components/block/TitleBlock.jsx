@@ -7,7 +7,7 @@ const TitleBlock = ({title, text, loading}) => {
                 <h3 className="">{title}</h3>
             </Skeleton>
             <Skeleton loading={loading} cls="bg-skelet-100 w-20 h-4">
-                <p className="text-xs text-second-400 font-medium">{text}</p>
+                <p className="text-xs text-second-400 dark:text-info-300 font-medium">{text}</p>
             </Skeleton>
         </div>
     )

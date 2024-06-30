@@ -29,25 +29,25 @@ const Slider = ({title, type, itemclasses}) => {
                         type === "task" && 
                         <CarouselContent  >
                             <CarouselItem className={`${itemclasses}`}>
-                            <Task clazz="gap-4 p-4 xl:p-6 bg-white rounded-[10px]"/>
+                            <Task clazz="gap-4 p-4 xl:p-6 bg-white dark:bg-dark-100  rounded-[10px]"/>
                             </CarouselItem>
                             <CarouselItem className={`${itemclasses}`}>
-                            <Task clazz="gap-4 p-4 xl:p-6 bg-white rounded-[10px]"/>
+                            <Task clazz="gap-4 p-4 xl:p-6 bg-white dark:bg-dark-100 rounded-[10px]"/>
                             </CarouselItem>
                             <CarouselItem className={`${itemclasses}`}>
-                            <Task clazz="gap-4 p-4 xl:p-6 bg-white rounded-[10px]"/>
+                            <Task clazz="gap-4 p-4 xl:p-6 bg-white dark:bg-dark-100 rounded-[10px]"/>
                             </CarouselItem>
                             <CarouselItem className={`${itemclasses}`}>
-                            <Task clazz="gap-4 p-4 xl:p-6 bg-white rounded-[10px]"/>
+                            <Task clazz="gap-4 p-4 xl:p-6 bg-white dark:bg-dark-100 rounded-[10px]"/>
                             </CarouselItem>
                             <CarouselItem className={`${itemclasses}`}>
-                            <Task clazz="gap-4 p-4 xl:p-6 bg-white rounded-[10px]"/>
+                            <Task clazz="gap-4 p-4 xl:p-6 bg-white dark:bg-dark-100 rounded-[10px]"/>
                             </CarouselItem>
                             <CarouselItem className={`${itemclasses}`}>
-                            <Task clazz="gap-4 p-4 xl:p-6 bg-white rounded-[10px]"/>
+                            <Task clazz="gap-4 p-4 xl:p-6 bg-white dark:bg-dark-100 rounded-[10px]"/>
                             </CarouselItem>
                             <CarouselItem className={`${itemclasses}`}>
-                            <Task clazz="gap-4 p-4 xl:p-6 bg-white rounded-[10px]"/>
+                            <Task clazz="gap-4 p-4 xl:p-6 bg-white dark:bg-dark-100 rounded-[10px]"/>
                             </CarouselItem>
                             <CarouselItem className={`${itemclasses}`}>
                             <Task clazz="gap-4 p-4 xl:p-6 bg-white rounded-[10px]"/>

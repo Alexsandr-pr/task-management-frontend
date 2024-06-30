@@ -10,7 +10,7 @@ const Mentor = ({itemclasses, text}) => {
     const {loading} = useSelector(store => store.mentor);
 
     return (
-        <article className='flex flex-col gap-5 p-4 xl:p-6 bg-white rounded-[10px]'>
+        <article className='flex flex-col gap-5 p-4 xl:p-6 bg-white dark:bg-dark-100 rounded-[10px]'>
             <div className="flex items-center justify-between gap-4 flex-wrap">
                 <div className="flex items-center gap-2" >
                     <Skeleton loading={loading} cls="bg-skelet-300 rounded-full w-12 h-12">
@@ -19,7 +19,7 @@ const Mentor = ({itemclasses, text}) => {
                     <TitleBlock text={"UI UX Design"} loading={loading} title={"Curious George"}/>
                 </div>
                 <Skeleton loading={loading} cls="bg-skelet-300 w-20 h-5">
-                    <button className='text-primary-500 text-sm font-medium hover:text-second-400 whitespace-nowrap'>
+                    <button className='text-primary-500 dark:text-info-400 text-sm font-medium hover:text-second-400 whitespace-nowrap'>
                         + Follow 
                     </button>
                 </Skeleton> 
