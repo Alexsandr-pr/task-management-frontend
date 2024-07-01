@@ -6,6 +6,7 @@ import MobileNav from "./MobileNav";
 import useMediaQuery from "@/hooks/useMediaQuery";
 import { useLocation } from "react-router-dom";
 import SearchCustom from "./SearchCustom";
+import ThemeToggle from "./ThemeToggle";
 
 
 const Header = () => {
@@ -66,6 +67,9 @@ const Header = () => {
 
 
                     <div className="flex items-center gap-4 md:gap-6">
+                        <div className="">
+                            <ThemeToggle/>
+                        </div>
                         <button className="rounded-full w-11 h-11 md:w-[52px] md:h-[52px] border border-solid dark:border-second-300 border-main dark:bg-dark-100  flex justify-center items-center">
                             <Notification/>
                         </button>

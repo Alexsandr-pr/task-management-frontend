@@ -39,9 +39,7 @@ const MobileNav = () => {
                                 <path d="M20 12H4M4 12L10 18M4 12L10 6" stroke="#8E92BC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                             </svg>
                         </button>
-                        <div className="">
-                            <ThemeToggle/>
-                        </div>
+                        
                     </div>
                     <nav className="pt-8">
                         <ul className="flex flex-col gap-6">
