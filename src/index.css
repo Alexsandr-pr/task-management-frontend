@@ -81,6 +81,11 @@ body,
 main {
     min-height: 100% !important;
 }
+
+.sidebar {
+    height: 100%;
+}
+
 .calendar-span {
     position: relative;
     z-index: 20;

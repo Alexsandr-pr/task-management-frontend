@@ -13,7 +13,7 @@ const Layout = () => {
 
     return (
         <div className={`flex  w-full bg-[#FAFAFA] dark:bg-dark-200`}>
-            <div className="hidden h-full md:flex md:w-[8vw] min-w-[80px] xl:w-[16vw] 2xl:w-[20vw]">
+            <div className="  md:w-[8vw] min-w-[80px] xl:w-[16vw] 2xl:w-[20vw]">
                 <Sidebar/>
             </div>
             <main className="main h-[100%] xl:w-[84vw] 2xl:w-[80vw]">
