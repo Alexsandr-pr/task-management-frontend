@@ -1,12 +1,12 @@
 import profile from "@/assets/profil.png"
 
-
-import { Notification } from "./Icons";
 import MobileNav from "./MobileNav";
 import useMediaQuery from "@/hooks/useMediaQuery";
 import { useLocation } from "react-router-dom";
 import SearchCustom from "./SearchCustom";
 import ThemeToggle from "./ThemeToggle";
+import Icon from "./block/Icon";
+import IconId from "@/utils/icon-consts";
 
 
 const Header = () => {
@@ -25,10 +25,6 @@ const Header = () => {
         "/mentors": "Explore Mentors"
     }
 
-    if(pathname === "/task") {
-        
-        
-    }
 
     const query = useMediaQuery('(max-width:767.98px)');
 
@@ -71,7 +67,7 @@ const Header = () => {
                             <ThemeToggle/>
                         </div>
                         <button className="rounded-full w-11 h-11 md:w-[52px] md:h-[52px] border border-solid dark:border-second-300 border-main dark:bg-dark-100  flex justify-center items-center">
-                            <Notification/>
+                            <Icon  className="text-second-300" id={IconId.notification}/>
                         </button>
                         <button>
                             <img className="w-11 h-11 md:w-[52px] md:h-[52px]" src={profile} alt="" />

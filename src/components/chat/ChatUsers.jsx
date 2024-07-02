@@ -13,7 +13,7 @@ const ChatUsers = ({
     const param = useParams();
     const dataChat = useSelector(store => store.chat.data);
     return (
-        <div className={`bg-white p-6 flex flex-col gap-8 ${clazz}`}>
+        <div className={`bg-white dark:bg-dark-100 p-6 flex flex-col gap-8 ${clazz}`}>
             <Input placeholder={"Search  Name"} type="search" />
             <ul className={`flex flex-col chat-list chat-scroll pr-2 `}>
                 {

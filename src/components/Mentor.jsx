@@ -4,6 +4,8 @@ import { useSelector } from "react-redux"
 import note2 from "/public/img/note-2.svg"
 import star from "/public/img/star.svg"
 import TitleBlock from "./block/TitleBlock"
+import Icon from "./block/Icon"
+import IconId from "@/utils/icon-consts"
 
 const Mentor = ({itemclasses, text}) => {
 
@@ -32,7 +34,7 @@ const Mentor = ({itemclasses, text}) => {
             <div className="flex justify-between items-center gap-2 flex-wrap">
                 <div className="flex items-center gap-2">
                     <Skeleton loading={loading} cls="bg-skelet-300 w-5 h-5">
-                        <img src={note2} alt="note-2" />
+                        <Icon className="text-second-300" id={IconId.noteTask}/>
                     </Skeleton>
                     <Skeleton loading={loading} cls="bg-skelet-200 w-20 h-5">
                         <span className='inline-flex font-medium text-sm whitespace-nowrap'>40 Task</span>

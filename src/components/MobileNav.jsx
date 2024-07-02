@@ -1,10 +1,13 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { publicRoutes } from '@/route';
 import { Link, NavLink, useLocation } from 'react-router-dom';
 import {useAutoAnimate} from "@formkit/auto-animate/react"
 import logo from "@/assets/book-square.svg"
-import { MessageIcon } from './Icons';
-import ThemeToggle from './ThemeToggle';
+
+import IconId from '@/utils/icon-consts';
+import Icon from './block/Icon';
+
+
 const MobileNav = () => {
 
     const [state, setState] = useState(false);
@@ -49,7 +52,7 @@ const MobileNav = () => {
                                     <li className="">
                                         <NavLink to={item.path} className="flex gap-3 group nav-link items-center justify-start  py-2.5 px-5">
                                             <div className="">
-                                                <item.icon/>
+                                                <Icon className="text-second-300" id={item.icon}/> 
                                             </div>
                                             <div className="text-sm text-second-300 nav-text font-semibold leading-normal">
                                                 {item.name}
@@ -62,7 +65,7 @@ const MobileNav = () => {
                             <li className="">
                                 <NavLink to={"/message"} className="flex gap-3 group nav-link items-center justify-start  py-2.5 px-5">
                                     <div className="">
-                                        <MessageIcon/>
+                                        <Icon className='text-second-300' id={IconId.message}/>
                                     </div>
                                     <div className="text-sm text-second-300 nav-text font-semibold leading-normal">
                                         Message

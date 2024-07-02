@@ -2,10 +2,8 @@ import React, { useState } from "react";
 import { addDays, subDays, startOfWeek, endOfWeek } from "date-fns";
 
 import { format } from "date-fns";
-import { ChevronLeft, ChevronRight } from "./Icons";
-
-
-  
+import IconId from "@/utils/icon-consts";
+import Icon from "./block/Icon";
 
 
 const Calendar = () => {
@@ -42,11 +40,11 @@ const Calendar = () => {
         <div className="max-w-full p-4 xl:p-6 bg-white dark:bg-dark-100 rounded-[10px]">
             <div className="flex justify-between items-center mb-6">
                 <button className="h-4 w-4" onClick={prevWeek}>
-                    <ChevronLeft  />
+                    <Icon className="text-second-300" id={IconId.arrowLeft}/>
                 </button>
                 <span className="text-sm text-center ">{format(currentWeek[0], 'MMMM yyyy')}</span>
                 <button className="h-4 w-4"  onClick={nextWeek}>
-                    <ChevronRight />
+                    <Icon className="text-second-300" id={IconId.arrowRight}/>
                 </button>
             </div>
             <div className="grid grid-cols-7 gap-2 mb-3">

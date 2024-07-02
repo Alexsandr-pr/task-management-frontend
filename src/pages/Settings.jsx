@@ -2,7 +2,7 @@
 import GeneralSettings from "@/components/settings/GeneralSettings";
 import SettingsProfile from "@/components/settings/SettingsProfile";
 import SettingsSecurity from "@/components/settings/SettingsSecurity";
-import { useEffect, useState } from "react"
+import { useEffect } from "react"
 import {  Link,  Route, Routes, useLocation, useNavigate } from "react-router-dom";
 
 const data = [
@@ -24,14 +24,16 @@ const data = [
 const Settings = () => {
     const {pathname} = useLocation();
     const navigate = useNavigate();
+    
+
     useEffect(() => {
         navigate("/settings/general");
     }, []);
     
     return (
-        <div className='w-full h-[100%] flex flex-col p-6 md:p-8 gap-8 dark:bg-dark-200 bg-[#FAFAFA] border-l border-solid border-l-main'>
-            <div className="p-5 md:p-8 rounded flex flex-col gap-8 bg-white dark:bg-dark-100">
-                <ul  className='w-full flex border-b gap-6 border-b-main border-solid'>
+        <div className='w-full h-[100vh] flex flex-col dark:border-none p-6 md:p-8 gap-8 dark:bg-dark-200 bg-[#FAFAFA] border-l border-solid border-l-main'>
+            <div className="p-5 md:p-8 h-[100%] rounded flex flex-col gap-8 bg-white dark:bg-dark-100">
+                <ul  className='w-full flex border-b gap-6 dark:border-none  border-b-main border-solid'>
                     {
                         data.map(({text, param}) => {
                             return (

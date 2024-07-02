@@ -1,18 +1,14 @@
-
-
-
-import {
-    Carousel,
-    CarouselContent,
-    CarouselItem,
-    CarouselNext,
-    CarouselPrevious,
-} from "@/components/ui/carousel"
-import Task from "./Task"
 import Mentor from "./Mentor"
+import Task from "./Task"
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "./ui/carousel"
+
+
+
+
 
 
 const Slider = ({title, type, itemclasses}) => {
+
     return (
             <Carousel >
                 <div className="flex justify-between gap-5 items-center mb-5">
@@ -57,9 +53,7 @@ const Slider = ({title, type, itemclasses}) => {
                     {
                         type === "mentors" && 
                         <CarouselContent >
-                            <CarouselItem className={`${itemclasses}`}>
-                                <Mentor />
-                            </CarouselItem>
+                            
                             <CarouselItem className={`${itemclasses}`}>
                                 <Mentor />
                             </CarouselItem>

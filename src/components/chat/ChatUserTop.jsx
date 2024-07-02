@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 
 const ChatUserTop = () => {
     return (
-        <div className="w-full px-6 md:px-12 py-7 flex items-center justify-between gap-8 bg-white">
+        <div className="w-full px-6 md:px-12 py-7 flex items-center justify-between gap-8 dark:bg-dark-100 bg-white">
             <div className="flex items-center gap-3">
             <Link to={'/message'}>
                 <img src={arrowLeft} alt="User name" />

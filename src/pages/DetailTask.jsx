@@ -1,7 +1,9 @@
 import detailTask from "@/assets/detail-task.png"
-import { HourIcon, StudentIcon, TickCircleIcon, UploadIcon } from "@/components/Icons"
+
 import Label from "@/components/Label"
+import Icon from "@/components/block/Icon"
 import { Button } from "@/components/ui/button"
+import IconId from "@/utils/icon-consts"
 
 
 const data = [
@@ -32,10 +34,10 @@ const DetailTask = () => {
                         </p>
                         <div className="flex gap-5 items-center flex-wrap">
                             <Label text={"200 Students Involved"}>
-                                <StudentIcon/>
+                                <Icon size={"16"} className="text-second-300" id={IconId.userCurrent}/>
                             </Label>
                             <Label text={"1 Hour"}>
-                                <HourIcon/>
+                                <Icon size={"16"} className="text-second-300" id={IconId.timeCircle}/>
                             </Label>
                         </div>
                     </div>
@@ -50,7 +52,7 @@ const DetailTask = () => {
                                 data.map((item, i) => {
                                     return (
                                         <li key={i} className="flex items-center gap-2.5 text-xs md:text-sm font-normal">
-                                            <TickCircleIcon/>
+                                            <Icon  className="text-second-300" id={IconId.timeCircle}/>
                                             {item.text}
                                         </li>
                                     )
@@ -97,7 +99,7 @@ const DetailTask = () => {
                 <div className=" mb-4 md:mb-9">
                     <p className="text-xs text-second-400 text-normal mb-2 md:mb-4">File submissions</p>
                     <div className="h-40 w-full flex rounded items-center justify-center mb-2 md:mb-3 border-dashed border border-primary-500">
-                        <UploadIcon/>
+                        <Icon size={"32"} className="text-second-300" id={IconId.upload}/>
                     </div>
                     <p className="text-xs text-second-400 text-normal">*drag or browser from device</p>
                 </div>

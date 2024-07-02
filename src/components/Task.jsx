@@ -1,18 +1,20 @@
-import React from 'react'
+
 import image from "@/assets/task-image.jpg";
 import { Slider } from "@/components/ui/slider"
-import { TimeCircle } from './Icons';
+
 import photo from "@/assets/photo-5-task.png"
 import Skeleton from './Skeleton';
 import TitleBlock from './block/TitleBlock';
 import { useSelector } from "react-redux"
+import IconId from '@/utils/icon-consts';
+import Icon from './block/Icon';
 
 const Task = ({clazz}) => {
     const {loading} = useSelector(store => store.mentor);
     return (
         <article className={`flex flex-col ${clazz}`}>
             <Skeleton cls={"w-full h-auto aspect-[16/6] bg-skelet-300"} loading={loading}>
-                <img className='w-full h-full rounded' src={image} alt="" />
+                <img className='max-w-[100%] h-auto rounded ' src={image} alt="" />
             </Skeleton>
             <TitleBlock title={"Creating Mobile App Design"} text={"UI UX Design"} loading={loading}/>
             
@@ -32,7 +34,7 @@ const Task = ({clazz}) => {
             <div className="flex items-center gap-4 justify-between">
                 <div className="flex items-center gap-2">
                     <Skeleton cls={"w-5 h-5 bg-skelet-200"} loading={loading}>
-                        <TimeCircle/>
+                        <Icon  className="text-second-300" id={IconId.timeCircle}/>
                     </Skeleton>
                     <Skeleton cls={"w-20 h-5 bg-skelet-300"} loading={loading}>
                         <span className='inline-flex font-medium '>3 Days Left</span>

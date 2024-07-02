@@ -2,7 +2,7 @@ import Calendar from "@/components/Calendar";
 
 import DashboardState from "@/components/DashboardState";
 import Header from "@/components/Header";
-import { PointsIcon } from "@/components/Icons";
+
 import Slider from "@/components/Slider";
 import { useLocation } from "react-router-dom";
 import Task from "@/components/Task";
@@ -12,6 +12,9 @@ import { useDispatch, useSelector } from "react-redux";
 import { setLoadingMentors } from "@/store/reducers/mentorReducer";
 import { useEffect } from "react";
 import Skeleton from "@/components/Skeleton";
+import Icon from "@/components/block/Icon";
+import IconId from "@/utils/icon-consts";
+import SliderFull from "@/components/slider/SliderFull";
 
 
 const data = [
@@ -45,13 +48,19 @@ const Overview = () => {
 
     return (
         <div className="flex flex-col xl:flex-row">
-            <div className="flex flex-col xl:w-[70%] bg-[#FCFCFC] md:bg-[#FAFAFA] dark:bg-dark-200 2xl:w-[63%] gap-8 p-5  2xl:p-8">
+            <div className=" xl:w-[70%] bg-[#FCFCFC] md:bg-[#FAFAFA] dark:bg-dark-200 2xl:w-[63%] gap-8 p-5  2xl:p-8">
+                <div className="flex flex-col gap-8 mb-8">
                 {
                     pathname  === "/" && !query && <Header/>
                 }
                 <DashboardState/>
-                <Slider itemclasses={"basis-full sm:basis-1/2 xl:basis-full  2xl:basis-1/2  2xl:pl-8"} type={"mentors"} title={"Monthly Mentors"}/>
-                <Slider itemclasses={"basis-full sm:basis-1/2 pl-5 xl:pl-8"} type={"task"} title={"Upcoming Task"}/>
+                </div>
+                
+                <div className="mb-8">
+                    <SliderFull two={true} title={"Monthly Mentors"} type={"mentor"}/>
+                </div>
+                
+                <SliderFull two={true} title={"Upcoming Task"} type={"task"}/>
             </div>
             <div className="bg-main dark:bg-dark-100 xl:w-[30%] 2xl:w-[36%] p-5  2xl:p-8 flex flex-col gap-10 items-center">
                 <div className="w-full sm:w-1/2 lg:w-1/3 xl:w-full">
@@ -61,7 +70,7 @@ const Overview = () => {
                     <div className="flex items-center justify-between gap-5 mb-5">
                         <h3 className="text-sm font-semibold">Task Today</h3>
                         <button>
-                            <PointsIcon/>
+                            <Icon  className="text-second-300" id={IconId.more}/>
                         </button>
                     </div>
                     <div className="flex flex-col sm:flex-row xl:flex-col  gap-8 ">

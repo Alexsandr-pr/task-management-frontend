@@ -10,7 +10,7 @@ const useBodyHidden = () => {
     let bodyHidden = false;
 
     function check() {
-        if(pathname.split('/').slice(0, 2).join('/') === `/message`) {
+        if(pathname.split('/').slice(0, 2).join('/') === "/message" || pathname.split('/').slice(0, 2).join('/') === "/settings") {
             document.body.style.overflow = "hidden";
             bodyHidden = true;
         } else {

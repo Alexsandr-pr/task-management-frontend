@@ -54,12 +54,16 @@ body {
     line-height: normal;
     font-size: 16px;
 }
+
 body.light {
     color:#141522;
 }
+
 body.dark {
     color:#DFE1F3;
+    height: 100%;
 }
+
 button,
 input {
     font-weight: inherit;
@@ -71,7 +75,12 @@ button {
     cursor: pointer;
     background-color: inherit;
 }
-
+#root,
+html,
+body,
+main {
+    min-height: 100% !important;
+}
 .calendar-span {
     position: relative;
     z-index: 20;
@@ -90,13 +99,27 @@ button {
 .nav-link.active path {
     stroke:#141522;
 }
+
+
 .nav-link.active {
     border-radius: 10px;
     background: #F5F5F7;
 }
+
 .nav-link.active .nav-text {
     color:#141522;
 }
+body.dark .nav-link.active {
+    border-radius: 10px;
+    background: #546FFF;
+}
+body.dark .nav-link.active .nav-text {
+    color:#fff;
+}
+.swiper-button-disabled {
+    opacity: 0.3;
+}
+
 @media(max-width:1280px){
     .main {
         width: calc(100vw - 80px);

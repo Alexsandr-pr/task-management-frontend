@@ -2,19 +2,18 @@
 import logo from "@/assets/book-square.svg"
 import { Link, NavLink, useLocation } from "react-router-dom"
 import { publicRoutes } from "../route"
-import { MessageIcon } from "./Icons";
-import ThemeToggle from "./ThemeToggle";
+import IconId from "@/utils/icon-consts";
+import Icon from "./block/Icon";
 
 const Sidebar = () => {
     const {pathname} = useLocation();
     return (
         <div className='h-full  min-w-full p-5 xl:p-8 bg-white dark:bg-dark-100'>
             <div className="flex mb-16  justify-between gap-4 items-center">
-                <Link to="/" className="flex gap-3 text-[32px] items-center justify-center font-semibold leading-normal xl:justify-start text-second-500">
+                <Link to="/" className="flex gap-3 text-[32px] items-center justify-center font-semibold leading-normal xl:justify-start ">
                     <img src={logo} alt="Logo" />
                     <span className=" hidden xl:block">DNX</span>
                 </Link>
-                
             </div>
             <nav >
                 <ul className="flex flex-col gap-6">
@@ -25,10 +24,10 @@ const Sidebar = () => {
                                 <li key={name} className="">
                                     <Link to={path} className={`
                                         ${pathname.split('/').slice(0, 2).join('/') === path.split('/').slice(0, 2).join('/') ? "active" : null}
-                                        flex gap-3 group nav-link items-center justify-center xl:justify-start py-2.5 px-5
+                                        flex gap-3 group nav-link  items-center justify-center xl:justify-start py-2.5 px-5
                                     `}>
                                         <div className="">
-                                            <item.icon/>
+                                            <Icon className="text-second-300" id={item.icon}/> 
                                         </div>
                                         <div className="text-sm hidden xl:block text-second-300 dark:text-second-100 nav-text font-semibold leading-normal">
                                             {name}
@@ -44,7 +43,7 @@ const Sidebar = () => {
                                         flex gap-3 group nav-link items-center justify-center xl:justify-start py-2.5 px-5
                                     `}>
                             <div className="">
-                                <MessageIcon/>
+                                <Icon className='text-second-300' id={IconId.message}/>
                             </div>
                             <div className="text-sm hidden xl:block text-second-300 dark:text-second-100 nav-text font-semibold leading-normal">
                                 Message

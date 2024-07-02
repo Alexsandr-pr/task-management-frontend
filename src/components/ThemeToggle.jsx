@@ -9,6 +9,7 @@ const ThemeToggle = () => {
     const handleToggle = () => {
         dispatch(toggleTheme());
         document.body.classList.toggle('dark', !darkMode);
+        document.documentElement.classList.toggle('dark', !darkMode);
     };
     
     return (

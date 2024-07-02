@@ -1,30 +1,30 @@
-import { MessageIcon, CategoryIcon, SettingsIcon, BookIcon, UserOctagonIcon} from "@/components/Icons";
+
 import Mentors from "@/pages/Mentors";
 import Overview from "@/pages/Overview";
 import Task from "@/pages/Task";
 import Message from "@/pages/Message";
 import Settings from "@/pages/Settings";
 import { MENTORS, MESSAGE, OVERVIEW, SETTINGS, TASK } from "@/utils/consts";
-
+import IconId from "./utils/icon-consts";
 
 
 export const publicRoutes = [
     {
         path: OVERVIEW,
         Component:Overview,
-        icon: CategoryIcon,
+        icon: IconId.overview,
         name: "Overview"
     },
     {
         path: TASK,
         Component:Task,
-        icon: BookIcon,
+        icon: IconId.task,
         name:"Task"
     },
     {
         path: MENTORS,
         Component:Mentors,
-        icon: UserOctagonIcon,
+        icon: IconId.userOctagon,
         name:"Mentors"
     },
     // {
@@ -36,7 +36,7 @@ export const publicRoutes = [
     {
         path: SETTINGS,
         Component:Settings,
-        icon: SettingsIcon,
+        icon: IconId.settingSidebar,
         name:"Settings"
     }
 ]

@@ -4,6 +4,7 @@ import AppRouter from "./AppRouter"
 
 
 function App() {
+	
 	useBodyHidden();
 
 	return <AppRouter/>

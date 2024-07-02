@@ -4,7 +4,9 @@ import { ArrowLeft, ArrowRight } from "lucide-react"
 
 import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
-import { ChevronLeft, ChevronRight } from "../Icons";
+import IconId from "@/utils/icon-consts";
+import Icon from "../block/Icon";
+
 
 const CarouselContext = React.createContext(null)
 
@@ -161,7 +163,7 @@ const CarouselPrevious = React.forwardRef(({ className, variant = "outline", siz
       disabled={!canScrollPrev}
       onClick={scrollPrev}
       {...props}>
-      <ChevronLeft/>
+      <Icon className="text-second-300" id={IconId.arrowLeft}/>
       <span className="sr-only">Previous slide</span>
     </Button>)
   );
@@ -180,7 +182,7 @@ const CarouselNext = React.forwardRef(({ className, variant = "outline", size = 
       disabled={!canScrollNext}
       onClick={scrollNext}
       {...props}>
-        <ChevronRight/>
+        <Icon className="text-second-300" id={IconId.arrowRight}/>
       <span className="sr-only">Next slide</span>
     </Button>)
   );

@@ -12,17 +12,17 @@ const Layout = () => {
     
 
     return (
-        <div className={`flex h-full w-full bg-[#FAFAFA] dark:bg-dark-100`}>
-            <div className="hidden  md:flex md:w-[8vw] min-w-[80px] xl:w-[16vw] 2xl:w-[20vw]">
+        <div className={`flex  w-full bg-[#FAFAFA] dark:bg-dark-200`}>
+            <div className="hidden h-full md:flex md:w-[8vw] min-w-[80px] xl:w-[16vw] 2xl:w-[20vw]">
                 <Sidebar/>
             </div>
-            <main className="main xl:w-[84vw] 2xl:w-[80vw]">
+            <main className="main h-[100%] xl:w-[84vw] 2xl:w-[80vw]">
                 {
                     pathname === "/" && queryMobile && <Header />
                 }
                 {
                     pathname !== "/" && (!pathname.startsWith(`/message/`) || !queryTablet) &&
-                    <div className="md:p-8 md:border-b md:border-solid md:border-b-main dark:border-none md:bg-white dark:bg-dark-100">
+                    <div className="md:p-8 md:border-b md:border-solid md:border-b-main dark:border-none md:bg-white dark:bg-dark-200">
                         <Header />
                     </div>
                 }
