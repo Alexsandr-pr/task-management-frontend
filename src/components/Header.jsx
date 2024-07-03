@@ -7,6 +7,7 @@ import SearchCustom from "./SearchCustom";
 import ThemeToggle from "./ThemeToggle";
 import Icon from "./block/Icon";
 import IconId from "@/utils/icon-consts";
+import { Button } from "./ui/button";
 
 
 const Header = () => {
@@ -29,7 +30,7 @@ const Header = () => {
     const query = useMediaQuery('(max-width:767.98px)');
 
     return (
-        <header className='bg-white md:bg-inherit border-b border-solid border-main dark:border-none md:border-none px-6 py-8 gap-6 flex flex-col md:p-0  dark:bg-dark-100'>
+        <header className='bg-white md:bg-inherit border-b border-solid border-main dark:border-none md:border-none px-6 py-8 gap-6 flex flex-col md:p-0 dark:bg-dark-200 md:dark:bg-none'>
             
             <div className="flex flex-col-reverse md:flex-row justify-between md:items-center gap-6">
             {
@@ -66,12 +67,13 @@ const Header = () => {
                         <div className="">
                             <ThemeToggle/>
                         </div>
-                        <button className="rounded-full w-11 h-11 md:w-[52px] md:h-[52px] border border-solid dark:border-second-300 border-main dark:bg-dark-100  flex justify-center items-center">
+                        <Button size="rounded" variant="rounded">
                             <Icon  className="text-second-300" id={IconId.notification}/>
-                        </button>
-                        <button>
+                        </Button>
+                        <Button size="rounded" variant="rounded">
                             <img className="w-11 h-11 md:w-[52px] md:h-[52px]" src={profile} alt="" />
-                        </button>
+                        </Button>
+                        
                     </div>
                 </div>
             </div>

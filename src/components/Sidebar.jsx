@@ -24,7 +24,7 @@ const Sidebar = () => {
                                 <li key={name} className="">
                                     <Link to={path} className={`
                                         ${pathname.split('/').slice(0, 2).join('/') === path.split('/').slice(0, 2).join('/') ? "active" : null}
-                                        flex gap-3 group nav-link  items-center justify-center xl:justify-start py-2.5 px-5
+                                        flex gap-3 group nav-link  items-center justify-center xl:justify-start py-2.5 px-5 hover:bg-second-100 dark:hover:bg-primary-500 rounded duration-300 transition-all
                                     `}>
                                         <div className="">
                                             <Icon className="text-second-300" id={item.icon}/> 
@@ -40,7 +40,7 @@ const Sidebar = () => {
                     <li className="">
                         <Link to={"/message"}  className={`
                                         ${pathname.split('/').slice(0, 2).join('/') === "/message" ? "active" : null}
-                                        flex gap-3 group nav-link items-center justify-center xl:justify-start py-2.5 px-5
+                                        flex gap-3 group nav-link items-center justify-center xl:justify-start py-2.5 px-5 hover:bg-second-100  dark:hover:bg-primary-500 rounded duration-300 transition-all 
                                     `}>
                             <div className="">
                                 <Icon className='text-second-300' id={IconId.message}/>

@@ -20,7 +20,9 @@ const IconId = {
     video: "#video",
     voiceCall: "#voice-call",
     userCurrent:"#user-current",
-    upload: "#upload"
+    upload: "#upload",
+    burgerMenu : "#burger-menu",
+    burgerClose : "#burger-close"
 }
 
 export default IconId;

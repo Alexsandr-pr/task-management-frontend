@@ -3,7 +3,7 @@ import Calendar from "@/components/Calendar";
 import DashboardState from "@/components/DashboardState";
 import Header from "@/components/Header";
 
-import Slider from "@/components/Slider";
+
 import { useLocation } from "react-router-dom";
 import Task from "@/components/Task";
 import { Button } from "@/components/ui/button";

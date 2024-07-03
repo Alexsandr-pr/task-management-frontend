@@ -2,7 +2,7 @@ import Mentor from '@/components/Mentor'
 import SliderFull from '@/components/slider/SliderFull';
 import { setLoadingMentors } from '@/store/reducers/mentorReducer';
 import React, { useEffect } from 'react'
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 
 const Mentors = () => {
     

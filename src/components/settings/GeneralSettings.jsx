@@ -1,7 +1,7 @@
 
 import { useState } from "react"
 import CustomCheckbox from "@/components/CustomCheckbox"
-import SettingsSelect from "@/components/SettingsSelect"
+import SettingsSelect from "@/components/settings/SettingsSelect"
 import { Button } from "../ui/button"
 const data = [
     {

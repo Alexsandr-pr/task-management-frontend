@@ -28,7 +28,7 @@ const DashboardState = () => {
                 <div className="w-full ">
                     <div className="p-5 rounded inline-flex flex-col gap-5 bg-[#F5F5F7] dark:bg-dark-100 w-[100%]">
                         <div className="flex items-center justify-between gap-4">
-                            <p className="text-base text-second-500 ">Activity</p>
+                            <p className="text-base  ">Activity</p>
                             <CustomSelect/>
                         </div>
                         <div className="bg-white dark:bg-dark-100 rounded p-2.5 w100%">

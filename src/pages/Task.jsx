@@ -1,5 +1,5 @@
 
-import Slider from '@/components/Slider'
+
 import SliderFull from '@/components/slider/SliderFull';
 import { setLoadingMentors } from '@/store/reducers/mentorReducer';
 import React, { useEffect } from 'react'

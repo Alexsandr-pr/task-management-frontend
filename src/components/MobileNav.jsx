@@ -6,6 +6,7 @@ import logo from "@/assets/book-square.svg"
 
 import IconId from '@/utils/icon-consts';
 import Icon from './block/Icon';
+import { Button } from './ui/button';
 
 
 const MobileNav = () => {
@@ -21,13 +22,10 @@ const MobileNav = () => {
 
     return (
         <div ref={block} className="">
-            <button onClick={() => setState(prev => !prev)} className="rounded-full w-11 h-11 md:w-[52px] md:h-[52px] border border-solid border-main flex justify-center items-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                        <path d="M3 7H21" stroke="#8E92BC" stroke-width="1.5" stroke-linecap="round"/>
-                        <path d="M3 12H21" stroke="#8E92BC" stroke-width="1.5" stroke-linecap="round"/>
-                        <path d="M3 17H21" stroke="#8E92BC" stroke-width="1.5" stroke-linecap="round"/>
-                    </svg>
-            </button>
+            <Button onClick={() => setState(prev => !prev)} size="rounded" variant="rounded">
+                <Icon  className="text-second-300" id={IconId.burgerMenu}/>
+            </Button>
+            
 
             {
                 state && <div className={`fixed  w-full h-full right-0 top-0 z-50 flex justify-end bg-stone-300 transition-all duration-300`}>
@@ -38,9 +36,7 @@ const MobileNav = () => {
                             <span className="">DNX</span>
                         </Link>
                         <button onClick={() => setState(false)}>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                <path d="M20 12H4M4 12L10 18M4 12L10 6" stroke="#8E92BC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
+                            <Icon  className="text-second-300" id={IconId.burgerClose}/>
                         </button>
                         
                     </div>

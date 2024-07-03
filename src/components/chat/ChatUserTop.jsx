@@ -1,8 +1,11 @@
 import photo from "@/assets/photo-mentor.png"
-import call from "/public/img/call.svg";
-import video from "/public/img/video.svg";
+
 import arrowLeft from "/public/img/arrow-left.svg";
 import { Link } from "react-router-dom";
+import IconId from "@/utils/icon-consts";
+
+import { Button } from "../ui/button";
+import Icon from "../block/Icon";
 
 const ChatUserTop = () => {
     return (
@@ -23,12 +26,12 @@ const ChatUserTop = () => {
                 </div>
             </div>
             <div className="flex items-center gap-6">
-                <button className="rounded-full w-11 h-11 md:w-[52px] md:h-[52px] border border-solid border-main flex justify-center items-center">
-                    <img src={video} alt="Video" />
-                </button>
-                <button className="rounded-full w-11 h-11 md:w-[52px] md:h-[52px] border border-solid border-main flex justify-center items-center">
-                    <img src={call} alt="Call" />
-                </button>
+                <Button size="rounded" variant="rounded">
+                    <Icon  className="text-second-300" id={IconId.video}/>
+                </Button>
+                <Button size="rounded" variant="rounded">
+                    <Icon  className="text-second-300" id={IconId.voiceCall}/>
+                </Button>
             </div>
         </div>
     )
