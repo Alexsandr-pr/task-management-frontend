@@ -7,6 +7,7 @@ import logo from "@/assets/book-square.svg"
 import IconId from '@/utils/icon-consts';
 import Icon from './block/Icon';
 import { Button } from './ui/button';
+import { MESSAGE } from '@/utils/consts';
 
 
 const MobileNav = () => {
@@ -58,8 +59,16 @@ const MobileNav = () => {
                                 )
                             })
                         }
+
+
+
+
+
+
+
+
                             <li className="">
-                                <NavLink to={"/message"} className="flex gap-3 group nav-link items-center justify-start  py-2.5 px-5">
+                                <NavLink to={MESSAGE} className="flex gap-3 group nav-link items-center justify-start  py-2.5 px-5">
                                     <div className="">
                                         <Icon className='text-second-300' id={IconId.message}/>
                                     </div>
@@ -68,6 +77,9 @@ const MobileNav = () => {
                                     </div>
                                 </NavLink>
                             </li>
+
+
+
                         </ul>
                         
                     </nav>

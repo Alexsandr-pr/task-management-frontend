@@ -1,4 +1,5 @@
 const defaultState = {
+    data: [],
     mentors: "params",
     loading: true
 }
@@ -11,6 +12,7 @@ export const mentorReducer = (state = defaultState, action) => {
     switch(action.type) {
         case LOADING: 
             return {...state, loading: action.payload};
+        
             default: 
                 return state
     }
